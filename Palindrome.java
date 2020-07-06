@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 /**
 Escribe un programa que pida una cadena al usuario y que revise si esta es un palindromo o no y terminar.
@@ -20,21 +19,24 @@ rats live on no evil star
 El programa debe imprimir true si es un palindromo y false si no lo es.
 */
 
+
+import java.util.Scanner;
+
 public class Palindrome {
 
     public static void main(String args[]) {
-        String s, invertir = ""; // Objects of String class
+        String s, alrevez = ""; // Objects of String class
         Scanner in = new Scanner(System.in);
         System.out.print("In:");
         s = in.nextLine();
         int tam = s.length();
         boolean esPalindromo = true;
+        s = s.replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u");
 
         for (int i = tam - 1; i >= 0; i--) {
-            invertir = invertir + s.charAt(i);
+            alrevez = alrevez + s.charAt(i);
         }
-
-        if (s.equals(invertir)) {
+        if (s.equals(alrevez)) {
             System.out.println(esPalindromo);
         } else {
             System.out.println(!esPalindromo);
