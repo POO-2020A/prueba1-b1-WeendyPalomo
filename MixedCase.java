@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 /**
 Obtener una cadena del usuario y almacenarla en:
@@ -26,11 +25,29 @@ aCrObAtIcS
 
 PISTA: Necesitaras una sentencia if dentro del for! 
 */
-class MixedCase {
-  public static void main(String[] args) {
-    Scanner inp = new Scanner(System.in);
-    System.out.print("In:");
-    String s = inp.nextLine();
-    //write your code below
-  }
+
+
+import java.util.Scanner;
+
+public class MixedCase {
+
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        System.out.print("In:");
+        String s = inp.nextLine();
+        String[] piece= s.split("");
+        for(int i=0; i<piece.length ; i++) {
+            if(i%2!=0){
+                String may = piece[i];
+                String MAY = may.toUpperCase();
+                System.out.print(MAY);
+            } else {
+                String min = piece[i];
+                String MIN = min.toLowerCase();
+                System.out.print(MIN);
+            }
+        }
+    }
 }
+
+
