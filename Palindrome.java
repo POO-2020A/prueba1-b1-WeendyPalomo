@@ -19,13 +19,25 @@ rats live on no evil star
 
 El programa debe imprimir true si es un palindromo y false si no lo es.
 */
-class Palindrome {
-  public static void main(String[] args) {
-    Scanner inp = new Scanner(System.in);
-    System.out.print("In:");
-    String s = inp.nextLine();
-   	//write your code below
-   	
-   	
-  }
+
+public class Palindrome {
+
+    public static void main(String args[]) {
+        String s, invertir = ""; // Objects of String class
+        Scanner in = new Scanner(System.in);
+        System.out.print("In:");
+        s = in.nextLine();
+        int tam = s.length();
+        boolean esPalindromo = true;
+
+        for (int i = tam - 1; i >= 0; i--) {
+            invertir = invertir + s.charAt(i);
+        }
+
+        if (s.equals(invertir)) {
+            System.out.println(esPalindromo);
+        } else {
+            System.out.println(!esPalindromo);
+        }
+    }
 }
